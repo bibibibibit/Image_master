@@ -1,0 +1,16 @@
+INPUT(
+./release\main.o
+./release\mainwindow.o
+./release\loadpng.o
+./release\lodepng.o
+./release\mymatrix.o
+./release\opetation.o
+./release\brightness.o
+./release\contrast.o
+./release\alpha.o
+./release\qrc_icons.o
+./release\moc_mainwindow.o
+./release\moc_brightness.o
+./release\moc_contrast.o
+./release\moc_alpha.o
+);

@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>972</width>
+    <height>708</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="icons.qrc">
+    <normaloff>:/new/prefix1/Icon/Icon.png</normaloff>:/new/prefix1/Icon/Icon.png</iconset>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <layout class="QGridLayout" name="gridLayout_2">
+    <item row="0" column="0">
+     <widget class="QScrollArea" name="scrollArea">
+      <property name="minimumSize">
+       <size>
+        <width>500</width>
+        <height>600</height>
+       </size>
+      </property>
+      <property name="widgetResizable">
+       <bool>true</bool>
+      </property>
+      <widget class="QWidget" name="scrollAreaWidgetContents">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>948</width>
+         <height>598</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>500</width>
+         <height>500</height>
+        </size>
+       </property>
+       <layout class="QGridLayout" name="gridLayout">
+        <item row="0" column="0">
+         <widget class="QLabel" name="label">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>972</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionOpen"/>
+    <addaction name="actionSave"/>
+    <addaction name="actionSave_as"/>
+   </widget>
+   <widget class="QMenu" name="menuGeometry">
+    <property name="title">
+     <string>Geometry</string>
+    </property>
+    <widget class="QMenu" name="menuRotation">
+     <property name="title">
+      <string>Rotation</string>
+     </property>
+     <addaction name="actionRight_90"/>
+     <addaction name="action180"/>
+     <addaction name="actionLeft_90"/>
+     <addaction name="actionUser_defined_Degree"/>
+    </widget>
+    <widget class="QMenu" name="menuMirror">
+     <property name="title">
+      <string>Mirror</string>
+     </property>
+     <addaction name="actionHorozontal"/>
+     <addaction name="actionVertical"/>
+    </widget>
+    <addaction name="menuRotation"/>
+    <addaction name="actionTranslation"/>
+    <addaction name="menuMirror"/>
+   </widget>
+   <widget class="QMenu" name="menuHistogram">
+    <property name="title">
+     <string>Histogram</string>
+    </property>
+    <addaction name="actionR_Type"/>
+    <addaction name="actionG_Type"/>
+    <addaction name="actionB_Type"/>
+   </widget>
+   <widget class="QMenu" name="menuSharpen">
+    <property name="title">
+     <string>Sharpen</string>
+    </property>
+    <addaction name="actionLow_Sharpen"/>
+    <addaction name="actionMedium_Sharpen"/>
+    <addaction name="actionHigh_Sharpen"/>
+    <addaction name="actionCustom_Degree"/>
+   </widget>
+   <widget class="QMenu" name="menuBasic">
+    <property name="title">
+     <string>Basic</string>
+    </property>
+    <addaction name="actionBrightness"/>
+    <addaction name="actionContrast"/>
+    <addaction name="actionAlpha"/>
+    <addaction name="actionBlack_White"/>
+    <addaction name="actionGrey_Level"/>
+   </widget>
+   <widget class="QMenu" name="menuNoise_Reduction">
+    <property name="title">
+     <string>Noise Reduction</string>
+    </property>
+    <addaction name="actionLow_Reduce"/>
+    <addaction name="actionMid_Reduce"/>
+    <addaction name="actionHigh_Reduce"/>
+    <addaction name="actionCustom_Degree_2"/>
+   </widget>
+   <widget class="QMenu" name="menuEdge_Enhancement">
+    <property name="title">
+     <string>Edge Enhancement</string>
+    </property>
+    <addaction name="actionVertical_2"/>
+    <addaction name="actionVertical_3"/>
+   </widget>
+   <widget class="QMenu" name="menu_Perspective_Transformation">
+    <property name="title">
+     <string>Advanced</string>
+    </property>
+    <addaction name="actionPerspective_Transformation"/>
+    <addaction name="actionAnalog_Double_Exposure"/>
+    <addaction name="actionIntelligent_Image_Segmentation"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuBasic"/>
+   <addaction name="menuGeometry"/>
+   <addaction name="menuHistogram"/>
+   <addaction name="menuSharpen"/>
+   <addaction name="menuNoise_Reduction"/>
+   <addaction name="menuEdge_Enhancement"/>
+   <addaction name="menu_Perspective_Transformation"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionOpen"/>
+   <addaction name="actionSave"/>
+   <addaction name="actionSave_as"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionOpen">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/new/prefix1/Icon/open.png</normaloff>:/new/prefix1/Icon/open.png</iconset>
+   </property>
+   <property name="text">
+    <string>Open</string>
+   </property>
+  </action>
+  <action name="actionSave">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/new/prefix1/Icon/save.png</normaloff>:/new/prefix1/Icon/save.png</iconset>
+   </property>
+   <property name="text">
+    <string>Save</string>
+   </property>
+  </action>
+  <action name="actionTranslation">
+   <property name="text">
+    <string>Translation</string>
+   </property>
+  </action>
+  <action name="actionRight_90">
+   <property name="text">
+    <string>Right 90°</string>
+   </property>
+  </action>
+  <action name="action180">
+   <property name="text">
+    <string>180°</string>
+   </property>
+  </action>
+  <action name="actionLeft_90">
+   <property name="text">
+    <string>Left 90°</string>
+   </property>
+  </action>
+  <action name="actionUser_defined_Degree">
+   <property name="text">
+    <string>Any Degree...</string>
+   </property>
+  </action>
+  <action name="actionHorozontal">
+   <property name="text">
+    <string>Horizontal</string>
+   </property>
+  </action>
+  <action name="actionVertical">
+   <property name="text">
+    <string>Vertical</string>
+   </property>
+  </action>
+  <action name="actionR_Type">
+   <property name="text">
+    <string>R-Type</string>
+   </property>
+  </action>
+  <action name="actionG_Type">
+   <property name="text">
+    <string>G-Type</string>
+   </property>
+  </action>
+  <action name="actionB_Type">
+   <property name="text">
+    <string>B-Type</string>
+   </property>
+  </action>
+  <action name="actionLow_Sharpen">
+   <property name="text">
+    <string>Low-Sharpen</string>
+   </property>
+  </action>
+  <action name="actionMedium_Sharpen">
+   <property name="text">
+    <string>Mid_Sharpen</string>
+   </property>
+  </action>
+  <action name="actionHigh_Sharpen">
+   <property name="text">
+    <string>High-Sharpen</string>
+   </property>
+  </action>
+  <action name="actionCustom_Degree">
+   <property name="text">
+    <string>Custom Degree...</string>
+   </property>
+  </action>
+  <action name="actionBrightness">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/new/prefix1/Icon/brightness.png</normaloff>:/new/prefix1/Icon/brightness.png</iconset>
+   </property>
+   <property name="text">
+    <string>Brightness</string>
+   </property>
+  </action>
+  <action name="actionContrast">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/new/prefix1/Icon/contrast.png</normaloff>:/new/prefix1/Icon/contrast.png</iconset>
+   </property>
+   <property name="text">
+    <string>Contrast</string>
+   </property>
+  </action>
+  <action name="actionBlack_White">
+   <property name="text">
+    <string>Black-White</string>
+   </property>
+  </action>
+  <action name="actionGrey_Level">
+   <property name="text">
+    <string>Grey-Level</string>
+   </property>
+  </action>
+  <action name="actionLow_Reduce">
+   <property name="text">
+    <string>Low-Reduce</string>
+   </property>
+  </action>
+  <action name="actionMid_Reduce">
+   <property name="text">
+    <string>Mid-Reduce</string>
+   </property>
+  </action>
+  <action name="actionHigh_Reduce">
+   <property name="text">
+    <string>High-Reduce</string>
+   </property>
+  </action>
+  <action name="actionCustom_Degree_2">
+   <property name="text">
+    <string>Custom-Degree</string>
+   </property>
+  </action>
+  <action name="actionVertical_2">
+   <property name="text">
+    <string>Horizontal</string>
+   </property>
+  </action>
+  <action name="actionVertical_3">
+   <property name="text">
+    <string>Vertical</string>
+   </property>
+  </action>
+  <action name="actionPerspective_Transformation">
+   <property name="text">
+    <string>Perspective Transformation</string>
+   </property>
+  </action>
+  <action name="actionAnalog_Double_Exposure">
+   <property name="text">
+    <string>Analog Double Exposure</string>
+   </property>
+  </action>
+  <action name="actionIntelligent_Image_Segmentation">
+   <property name="text">
+    <string>Intelligent Image Segmentation</string>
+   </property>
+  </action>
+  <action name="actionSave_as">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/new/prefix1/Icon/Save as.png</normaloff>:/new/prefix1/Icon/Save as.png</iconset>
+   </property>
+   <property name="text">
+    <string>Save as</string>
+   </property>
+  </action>
+  <action name="actionAlpha">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/new/prefix1/Icon/alpha.png</normaloff>:/new/prefix1/Icon/alpha.png</iconset>
+   </property>
+   <property name="text">
+    <string>Alpha</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="icons.qrc"/>
+ </resources>
+ <connections/>
+</ui>

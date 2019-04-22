@@ -1,0 +1,11 @@
+<RCC>
+    <qresource prefix="/new/prefix1">
+        <file>Icon/Icon.png</file>
+        <file>Icon/open.png</file>
+        <file>Icon/save.png</file>
+        <file>Icon/Save as.png</file>
+        <file>Icon/brightness.png</file>
+        <file>Icon/contrast.png</file>
+        <file>Icon/alpha.png</file>
+    </qresource>
+</RCC>

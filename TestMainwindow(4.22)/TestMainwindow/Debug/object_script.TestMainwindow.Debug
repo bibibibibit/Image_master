@@ -1,0 +1,16 @@
+INPUT(
+./debug\main.o
+./debug\mainwindow.o
+./debug\loadpng.o
+./debug\lodepng.o
+./debug\mymatrix.o
+./debug\opetation.o
+./debug\brightness.o
+./debug\contrast.o
+./debug\alpha.o
+./debug\qrc_icons.o
+./debug\moc_mainwindow.o
+./debug\moc_brightness.o
+./debug\moc_contrast.o
+./debug\moc_alpha.o
+);
